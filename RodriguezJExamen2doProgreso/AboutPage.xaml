@@ -2,19 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RodriguezJExamen2doProgreso.AboutPage"
-             Title="AboutPage">
-    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="*,*">
-        <Label Text="Nombre:" FontAttributes="Bold"/>
-        <Label Text="Jean Paul Rodriguez" Grid.Column="1" VerticalOptions="Center"/>
+             Title="About">
 
-        <Label Text="Fecha de nacimiento:" Grid.Row="1" FontAttributes="Bold" />
-        <Label Text="20/09/2004" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+    <Grid Padding="20" 
+          RowSpacing="20" 
+          ColumnSpacing="10"
+          VerticalOptions="Center">
 
-        <Label Text="Intereses:" Grid.Row="2" FontAttributes="Bold" />
-        <Label Text="Programación, Fortnite" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <Label Text="Versión:" Grid.Row="3" FontAttributes="Bold" />
-        <Label Text="1.0" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"/>
+        <StackLayout Grid.Row="0" Grid.Column="0" 
+                     BackgroundColor="LightBlue" 
+                     Padding="15">
+            <Label Text="Nombre:" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Jean Paul Rodriguez" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="0" Grid.Column="1" 
+                     BackgroundColor="LightBlue" 
+                     Padding="15">
+            <Label Text="Fecha de nacimiento:" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="20/09/2004" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="0" 
+                     BackgroundColor="Aquamarine" 
+                     Padding="15">
+            <Label Text="Intereses:" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Programación, Fortnite" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="1" 
+                     BackgroundColor="Aquamarine" 
+                     Padding="15">
+            <Label Text="Versión:" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="1.0" HorizontalOptions="Center"/>
+        </StackLayout>
+
     </Grid>
 </ContentPage>
-

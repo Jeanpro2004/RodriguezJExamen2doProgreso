@@ -6,7 +6,7 @@
     <StackLayout Padding="30"  Spacing="20" VerticalOptions="Center">
         <Label Text=" Jean Paul Rodriguez"  FontSize="32" HorizontalOptions="Center" />
 
-        <Image Source="appicon.png" HeightRequest="200" WidthRequest="200"> </Image>
+        <Image Source="dotnet_bot.png" HeightRequest="200" WidthRequest="200"> </Image>
 
         <Button Text = "Chistes" Clicked="OnChistesClicked" />
             <Button Text = "About" Clicked="OnAboutClicked" />

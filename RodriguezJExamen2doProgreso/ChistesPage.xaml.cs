@@ -4,28 +4,49 @@ namespace RodriguezJExamen2doProgreso;
 
 public partial class ChistesPage : ContentPage
 {
-	HttpClient client = new HttpClient();
-    public ChistesPage()
-	{
-		InitializeComponent();
-		LoadJoke();
-	}
+    private readonly HttpClient client = new HttpClient();
 
-	private async void LoadJoke()
+    public ChistesPage()
     {
-       
+        InitializeComponent();
+        LoadJoke();
+    }
+
+    private async void LoadJoke()
+    {
+        try
+        {
+            JokeLabel.Text = "Cargando chiste...";
+
             var response = await client.GetStringAsync("https://official-joke-api.appspot.com/random_joke");
-            var joke = JsonSerializer.Deserialize<Joke>(response);
-            JokeLabel.Text = $"{joke.Setup}\n\n{joke.Punchline}";
-        }
-            private void OnJokeClicked(object sender, EventArgs e)
+            var joke = JsonSerializer.Deserialize<Joke>(response, new JsonSerializerOptions
             {
-            LoadJoke();
+                PropertyNameCaseInsensitive = true
+            });
+
+            if (joke != null)
+            {
+                JokeLabel.Text = $"{joke.Setup}\n\n{joke.Punchline}";
+            }
+            else
+            {
+                JokeLabel.Text = "No se pudo cargar el chiste";
             }
         }
-    public class Joke
-    {
-    public string Setup { get; set; }
-    public string Punchline { get; set; }
-   
+        catch (Exception ex)
+        {
+            JokeLabel.Text = $"Error al cargar el chiste: {ex.Message}";
+        }
     }
+
+    private void OnJokeClicked(object sender, EventArgs e)
+    {
+        LoadJoke();
+    }
+}
+
+public class Joke
+{
+    public string Setup { get; set; } = string.Empty;
+    public string Punchline { get; set; } = string.Empty;
+}
