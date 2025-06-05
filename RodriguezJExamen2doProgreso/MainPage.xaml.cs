@@ -9,14 +9,15 @@
             InitializeComponent();
         }
 
-     private async void OnChistesClicked (object sender, EventArgs e)
+        private async void OnChistesClicked(object sender, EventArgs e)
         {
-          await Navigation.PushAsync(new ChistesPage());
+            await Navigation.PushAsync(new ChistesPage());
         }
 
-     private async void OnAboutClicked(object sender, EventArgs e)
+        private async void OnAboutClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AboutPage());
         }
 
     }
+}

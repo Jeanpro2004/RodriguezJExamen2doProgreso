@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RodriguezJExamen2doProgreso.ChistesPage"
+             Title="ChistesPage">
+
+    <AbsoluteLayout>
+
+        <Label x:Name="JokeLabel"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               AbsoluteLayout.LayoutBounds="0.5,0.4,0.8,-1"
+               AbsoluteLayout.LayoutFlags="All"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+
+        <Button Text="Otro Chiste"
+                Clicked="OnJokeClicked"
+                AbsoluteLayout.LayoutBounds="0.5,0.4,0.8,60"
+                AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+    </AbsoluteLayout>
+</ContentPage>
