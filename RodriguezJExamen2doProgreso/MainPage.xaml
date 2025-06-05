@@ -5,7 +5,7 @@
 
     <StackLayout Padding="30"  Spacing="20" VerticalOptions="Center">
         <Label Text=" Jean Paul Rodriguez"  FontSize="32" HorizontalOptions="Center" />
-
+        <!-- Imagen utlizada mediante url -->
         <Image Source="https://stickerly.pstatic.net/sticker_pack/M6DUfwweCC1PPhJ9HOcpw/DAS3U4/19/-839449538.png" HeightRequest="200" WidthRequest="200"> </Image>
 
         <Button Text = "Chistes" Clicked="OnChistesClicked" />
